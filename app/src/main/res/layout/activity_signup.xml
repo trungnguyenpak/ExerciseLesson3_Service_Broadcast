@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1f1761"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.trungnguyeen.exerciselesson3.SignupActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Sign up"
+        android:textColor="@color/colorWhite"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="WHO ARE YOU"
+        android:textColor="#807BAC"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/lan_anh"
+                app:civ_border_color="@color/colorWhite"
+                app:civ_border_width="2dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/lan_anh"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/huu_duc"
+                app:civ_border_color="@color/colorWhite"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/huu_duc"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/thanh_hoai"
+                app:civ_border_color="@color/colorWhite"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/thanh_hoai"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/huu_trung"
+                app:civ_border_color="@color/colorWhite"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/huu_trung"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shap">
+
+            <ImageView
+                android:id="@+id/img_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_action_user"
+                android:tint="#5B5681" />
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/img_username"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:hint="Username"
+                android:textColorHint="#5B5681"
+                android:textSize="17sp"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shap">
+
+            <ImageView
+                android:id="@+id/img_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_action_gmail"
+                android:tint="#5B5681" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/img_email"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#5B5681"
+                android:textSize="17sp"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shap">
+
+            <ImageView
+                android:id="@+id/img_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_action_lock_closed"
+                android:tint="#5B5681" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/img_password"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:hint="Password"
+                android:textColorHint="#5B5681"
+                android:textSize="17sp"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shap">
+
+            <ImageView
+                android:id="@+id/img_confirmPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_action_lock_closed"
+                android:tint="#5B5681" />
+
+            <EditText
+                android:id="@+id/edt_confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/img_confirmPassword"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:hint="Confirm Password"
+                android:textColorHint="#5B5681"
+                android:textSize="17sp"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custom_button_radius"
+            android:text="SIGNUP"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="@string/have_an_account"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_here"
+                android:textColor="#f47917"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
