@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.UserInfoActivity">
+
         </activity>
+
     </application>
 
 </manifest>

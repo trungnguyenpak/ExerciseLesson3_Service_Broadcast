@@ -5,8 +5,6 @@ package com.trungnguyeen.exerciselesson3.view;
  */
 
 public interface UserInfoActivityListener {
-
     void internetConnected();
     void noInternet();
-
 }

@@ -35,8 +35,8 @@ public class ConnectivityChangeReceiver extends BroadcastReceiver{
             //Toast.makeText(context, "No Internet", Toast.LENGTH_SHORT).show();
             callback.noInternet();
         }
-
     }
+
 
     public boolean checkConnectionFromSystem(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

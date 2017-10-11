@@ -18,40 +18,37 @@ public class UserInfoActivity extends AppCompatActivity implements UserInfoActiv
 
     public static final String TAG = UserInfoActivity.class.getSimpleName();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
 
-        getDataUser();
         getWidgets();
 
-
-
+        Intent intent = getIntent();
+        if (intent != null){
+            String username = intent.getExtras().getString(SignupActivity.USERNAME);
+            tvUsername.setText(username);
+        }
 
         registerReceiver(new ConnectivityChangeReceiver(this),
                          new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 
     }
 
+
     @Override
     public void internetConnected() {
         Toast.makeText(UserInfoActivity.this, "Internet connected!", Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
     public void noInternet() {
         Toast.makeText(UserInfoActivity.this, "No Internet", Toast.LENGTH_SHORT).show();
     }
 
-
-    private void getDataUser() {
-        Intent intent = getIntent();
-        if (intent != null){
-            String username = intent.getExtras().getString(SignupActivity.USERNAME);
-            tvUsername.setText(username);
-        }
-    }
 
     private void getWidgets() {
         tvUsername = (TextView) findViewById(R.id.tv_username);
