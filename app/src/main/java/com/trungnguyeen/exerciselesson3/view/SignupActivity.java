@@ -1,4 +1,4 @@
-package com.trungnguyeen.exerciselesson3;
+package com.trungnguyeen.exerciselesson3.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.trungnguyeen.exerciselesson3.ConnectivityChangeReceiver;
+import com.trungnguyeen.exerciselesson3.R;
+
 public class SignupActivity extends AppCompatActivity {
 
 
@@ -19,7 +22,7 @@ public class SignupActivity extends AppCompatActivity {
     private EditText edtPassword;
     private EditText edtConfirmPassword;
     private Button btnSignUp;
-
+    private ConnectivityChangeReceiver checkNetwork;
 
     public static final String USERNAME = "USERNAME";
     public static final String TAG = SignupActivity.class.getSimpleName();
@@ -29,10 +32,15 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-
         getWidgets();
         setEvents();
+
+
+
     }
+
+
+
 
     private void getWidgets() {
         edtUsername = (EditText) findViewById(R.id.edt_username);
@@ -70,7 +78,7 @@ public class SignupActivity extends AppCompatActivity {
                     Intent intent = new Intent(SignupActivity.this, UserInfoActivity.class);
                     intent.putExtra(USERNAME, username);
                     startActivity(intent);
-                    Toast.makeText(SignupActivity.this, "Success!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this, "Sign Up Success!", Toast.LENGTH_SHORT).show();
 
                 }
                 else{
