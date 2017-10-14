@@ -34,9 +34,6 @@ public class SignupActivity extends AppCompatActivity {
 
         getWidgets();
         setEvents();
-
-
-
     }
 
 
